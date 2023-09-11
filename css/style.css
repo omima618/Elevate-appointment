@@ -1,0 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+.dropdown-item.active {
+    color: #fff !important;
+    background-color: #EF797D;
+}
