@@ -15,8 +15,8 @@ document.addEventListener('click', function (e) {
 const switchService = (currentService) => {
     document.querySelectorAll('[data-service]').forEach((service) => {
         if (service.dataset.service === currentService) {
-            setTimeout(() => { service.classList.remove('hidden'); }, 202);
-            setTimeout(() => { service.classList.remove('opacity-0'); }, 400);
+            setTimeout(() => { service.classList.remove('hidden'); }, 201);
+            setTimeout(() => { service.classList.remove('opacity-0'); }, 300);
             service.querySelector('select').id = 'service';
         } else {
             service.classList.add('opacity-0');
