@@ -64,61 +64,77 @@
                 </div>
                 <form class="w-full mx-auto max-w-3xl">
                     <div class="flex flex-wrap mb-6">
-                        <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-                            <label class="block uppercase tracking-wide text-zinc-600 text-sm font-bold mb-2"
-                                for="first-name">
-                                First Name
+                        <div class="w-full px-3 mb-6 md:mb-0">
+                            <label class="block select-none uppercase tracking-wide text-zinc-600 text-sm font-bold mb-2"
+                                for="full-name">
+                                Full Name <span class="text-red-500">*</span>
                             </label>
                             <input
                                 class="appearance-none block w-full bg-white text-zinc-700 border border-gray-200 rounded-lg py-3 px-4 leading-tight focus:outline-none focus:border-red-200"
-                                id="first-name" type="text">
+                                id="full-name" type="text" name="name" autocomplete="name" required>
                             <p class="validation-msg hidden text-red-500 text-xs italic"></p>
-                        </div>
-                        <div class="w-full md:w-1/2 px-3">
-                            <label class="block uppercase tracking-wide text-zinc-600 text-sm font-bold mb-2"
-                                for="last-name">
-                                Last Name
-                            </label>
-                            <input
-                                class="appearance-none block w-full bg-white text-zinc-700 border border-gray-200 rounded-lg py-3 px-4 leading-tight focus:outline-none focus:border-red-200"
-                                id="last-name" type="text">
                         </div>
                     </div>
                     <div class="flex flex-wrap mb-6">
+                        <div class="w-full md:w-1/2 px-3">
+                            <label class="block select-none uppercase tracking-wide text-zinc-600 text-sm font-bold mb-2"
+                                for="phone">
+                                Phone <span class="text-red-500">*</span>
+                            </label>
+                            <input
+                                class="appearance-none block w-full bg-white text-zinc-700 border border-gray-200 rounded-lg py-3 px-4 leading-tight focus:outline-none focus:border-red-200"
+                                id="phone" name="phone" type="tel" autocomplete="tel" required>
+                        </div>
                         <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-                            <label class="block uppercase tracking-wide text-zinc-600 text-sm font-bold mb-2"
+                            <label class="block select-none uppercase tracking-wide text-zinc-600 text-sm font-bold mb-2"
                                 for="email">
                                 Email
                             </label>
                             <input
                                 class="appearance-none block w-full bg-white text-zinc-700 border border-gray-200 rounded-lg py-3 px-4 leading-tight focus:outline-none focus:border-red-200"
-                                id="email" type="email">
+                                id="email" name="email" type="email" autocomplete="email">
                             <p class="text-red-500 text-xs italic"></p>
-                        </div>
-                        <div class="w-full md:w-1/2 px-3">
-                            <label class="block uppercase tracking-wide text-zinc-600 text-sm font-bold mb-2"
-                                for="phone">
-                                Phone
-                            </label>
-                            <input
-                                class="appearance-none block w-full bg-white text-zinc-700 border border-gray-200 rounded-lg py-3 px-4 leading-tight focus:outline-none focus:border-red-200"
-                                id="phone" type="tel">
                         </div>
                     </div>
                     <div class="flex flex-wrap mb-6">
                         <div class="w-full px-3">
-                            <label class="block uppercase tracking-wide text-zinc-600 text-sm font-bold mb-2" for="service">
-                                Service
+                            <label class="block select-none uppercase tracking-wide text-zinc-600 text-sm font-bold mb-4" for="service">
+                                Service <span class="text-red-500">*</span>
                             </label>
-                            <div class="relative">
-                                <select
-                                    class="block appearance-none w-full bg-white border border-gray-200 text-zinc-700 py-3 px-4 pr-8 rounded-lg leading-tight focus:outline-none focus:border-red-200"
-                                    id="service">
-                                    <option>Service 1</option>
-                                    <option>Service 2</option>
-                                    <option>Service 3</option>
-                                    <option>Service 4</option>
-                                    <option>Service 5</option>
+                            <div class="w-full flex gap-4 mb-4">
+                                <div class="w-1/2 flex gap-2 items-center select-none">
+                                    <input type="radio" name="service-type" id="service-type-1" value="dental">
+                                    <label class="text-zinc-600 text-sm font-medium" for="service-type-1">Dental Services</label>
+                                </div>
+                                <div class="w-1/2 flex gap-2 items-center select-none">
+                                    <input type="radio" name="service-type" id="service-type-2" value="dermatological">
+                                    <label class="text-zinc-600 text-sm font-medium" for="service-type-2">Dermatological Services</label>
+                                </div>
+                            </div>
+                            <div class="relative hidden transition duration-200" data-service="dental">
+                                <select id="service" name="service" class="block appearance-none w-full bg-white border border-gray-200 text-zinc-700 py-3 px-4 pr-8 rounded-lg leading-tight focus:outline-none focus:border-red-200">
+                                    <option>Dental Service 1</option>
+                                    <option>Dental Service 2</option>
+                                    <option>Dental Service 3</option>
+                                    <option>Dental Service 4</option>
+                                    <option>Dental Service 5</option>
+                                </select>
+                                <div
+                                    class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-zinc-700">
+                                    <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="relative hidden transition duration-200" data-service="dermatological">
+                                <select name="service" class="block appearance-none w-full bg-white border border-gray-200 text-zinc-700 py-3 px-4 pr-8 rounded-lg leading-tight focus:outline-none focus:border-red-200">
+                                    <option>Dermatological Services 1</option>
+                                    <option>Dermatological Services 2</option>
+                                    <option>Dermatological Services 3</option>
+                                    <option>Dermatological Services 4</option>
+                                    <option>Dermatological Services 5</option>
                                 </select>
                                 <div
                                     class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-zinc-700">
