@@ -103,7 +103,7 @@
                             </label>
                             <div class="w-full flex flex-wrap gap-4 mb-4">
                                 <div class="min-w-[calc(50%_-_0.5rem)] grow flex gap-2 items-center select-none">
-                                    <input type="radio" name="service-type" id="service-type-1" value="dental">
+                                    <input type="radio" name="service-type" checked id="service-type-1" value="dental">
                                     <label class="text-zinc-700 text-sm font-medium whitespace-nowrap" for="service-type-1">Dental Services</label>
                                 </div>
                                 <div class="min-w-[calc(50%_-_0.5rem)] grow flex gap-2 items-center select-none">
@@ -111,7 +111,7 @@
                                     <label class="text-zinc-700 text-sm font-medium whitespace-nowrap" for="service-type-2">Dermatological Services</label>
                                 </div>
                             </div>
-                            <div class="relative hidden opacity-0 transition duration-200" data-service="dental">
+                            <div class="relative transition duration-200" data-service="dental">
                                 <select id="service" name="service"
                                     class="block appearance-none w-full bg-white border border-gray-200 text-[#7A5246] py-3 px-4 pr-8 rounded-lg leading-tight focus:outline-none focus:border-[#CBA275]">
                                     <option>Dental Service 1</option>
@@ -150,7 +150,7 @@
                         </div>
                     </div>
                     <button type="submit"
-                        class="block w-full mt-8 text-lg text-center font-medium bg-[#7A5246] border border-[#7A5246] text-white rounded-lg p-3 transition duration-200 hover:bg-white hover:text-[#7A5246]">
+                        class="block w-[calc(100%_-_1.5rem)] mt-8 mx-auto text-lg text-center font-medium bg-[#7A5246] border border-[#7A5246] text-white rounded-lg p-3 transition duration-200 hover:bg-white hover:text-[#7A5246]">
                         Book Now
                     </button>
                 </form>
